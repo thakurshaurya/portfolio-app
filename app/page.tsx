@@ -20,12 +20,12 @@ const page = () => {
         <Abouttxt />
       </section>
 
-      <section id="work" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-24 text-center sm:px-8">
-        <Worktxt />
-      </section>
-
       <section id="skill" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-24 text-center sm:px-8">
         <Skilltxt />
+      </section>
+
+      <section id="work" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-24 text-center sm:px-8">
+        <Worktxt />
       </section>
 
       <section id="contact" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-24 text-center sm:px-8">

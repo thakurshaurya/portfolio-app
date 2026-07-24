@@ -324,13 +324,102 @@ body {
   background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.7) 100%);
 }
 
+/* ============================================================
+   SKILLS MARQUEE — pure CSS scroll loop (no per-frame JS).
+   Two rows drift in opposite directions; hovering a row pauses
+   it, hovering a card lifts + glows it in that skill's color.
+   ============================================================ */
+.skill-marquee-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.skill-marquee-row {
+  display: flex;
+  width: max-content;
+  gap: 1.25rem;
+  animation: skillScroll var(--duration, 32s) linear infinite;
+  will-change: transform;
+}
+
+.skill-marquee-row--reverse {
+  animation-direction: reverse;
+}
+
+.skill-marquee-row:hover {
+  animation-play-state: paused;
+}
+
+@keyframes skillScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.skill-card {
+  flex: none;
+  display: flex;
+  width: 128px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1.5rem 1rem;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.06);
+  border-color: var(--skill-color, var(--color-cyber-cyan));
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 0 18px color-mix(in srgb, var(--skill-color, var(--color-cyber-cyan)) 55%, transparent),
+    0 0 40px color-mix(in srgb, var(--skill-color, var(--color-cyber-cyan)) 30%, transparent);
+}
+
+.skill-card__icon {
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-card__icon {
+  transform: scale(1.15) rotate(-4deg);
+}
+
+.skill-card__name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-cyber-muted);
+  text-align: center;
+  transition: color 0.25s ease;
+}
+
+.skill-card:hover .skill-card__name {
+  color: var(--color-cyber-text);
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
   .text-gradient-cyber,
-  .cyber-bg::before {
+  .cyber-bg::before,
+  .skill-marquee-row {
     animation: none;
   }
 }
