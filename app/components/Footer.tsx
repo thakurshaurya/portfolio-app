@@ -11,9 +11,9 @@ import { MdEmail } from "react-icons/md";
 const SOCIALS = [
   { label: "GitHub", href: "https://github.com/thakurshaurya", icon: FaGithub },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/shaurya-thakur-880912327/", icon: FaLinkedinIn },
-  { label: "X (Twitter)", href: "https://x.com/", icon: FaXTwitter },
+  // { label: "X (Twitter)", href: "https://x.com/", icon: FaXTwitter },
   { label: "Instagram", href: "https://instagram.com/_.shaurya7._", icon: FaInstagram },
-  { label: "Discord", href: "https://discord.com/", icon: FaDiscord },
+  // { label: "Discord", href: "https://discord.com/", icon: FaDiscord },
   { label: "Email", href: "mailto:thakurshaurya2007@gmail.com", icon: MdEmail },
 ];
 
@@ -30,7 +30,7 @@ const Footer = () => {
             PORTFOLIO<span className="text-cyber-cyan">.</span>
           </p>
           <p className="mt-1 max-w-xs text-sm text-cyber-muted">
-            Building the future, one line of code at a time.
+            My Portfolio Website
           </p>
         </div>
 

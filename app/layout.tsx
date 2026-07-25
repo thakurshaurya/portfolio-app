@@ -20,7 +20,7 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio Website",
+  title: "Portfolio-ShauryaThakur",
   description: "A cyberpunk-themed developer portfolio.",
 };
 
