@@ -75,13 +75,15 @@ const Initialtxt = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 flex flex-wrap items-center justify-center gap-5"
         >
-          <button
-            onClick={() => window.open("/resume.pdf")}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="cyber-btn flex items-center gap-3 px-8 py-4 text-lg"
           >
             Download CV
             <FaExternalLinkAlt />
-          </button>
+          </a>
 
           <Link
             href="#work"
