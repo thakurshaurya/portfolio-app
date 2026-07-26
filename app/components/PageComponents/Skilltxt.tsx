@@ -78,7 +78,7 @@ const SkillCard = ({ skill }: { skill: Skill }) => {
   const Icon = skill.icon;
   return (
     <div
-      className="skill-card"
+      className="skill-card "
       style={{ "--skill-color": skill.color } as React.CSSProperties}
     >
       <Icon className="skill-card__icon" size={44} color={skill.color} />
@@ -140,7 +140,7 @@ const Skilltxt = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="skill-marquee-wrap"
+          className="skill-marquee-wrap py-10"
         >
           <MarqueeRow items={rowA} duration={34} />
           <MarqueeRow items={rowB} duration={40} reverse />
