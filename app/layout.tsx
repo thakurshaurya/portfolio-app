@@ -4,14 +4,12 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-// Display font for headings / UI chrome (variable weight)
 const orbitron = Orbitron({
   subsets: ["latin"],
   variable: "--font-orbitron",
   display: "swap",
 });
 
-// Body / interface font
 const rajdhani = Rajdhani({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],

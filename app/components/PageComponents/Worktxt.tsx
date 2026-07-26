@@ -45,7 +45,6 @@ const Worktxt = () => {
       id="projects"
       className="relative overflow-hidden px-6 py-28"
     >
-      {/* Background — pure CSS animations for GPU-composited blob drift */}
       <style jsx>{`
         @keyframes blob-drift-left {
           0%, 100% { transform: translate3d(0, 0, 0); }
@@ -69,7 +68,6 @@ const Worktxt = () => {
       <div className="blob-right absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-500/10 " />
 
       <div className="relative mx-auto max-w-7xl">
-        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -121,10 +119,8 @@ const Worktxt = () => {
               }}
               className="group relative overflow-hidden rounded-3xl border border-cyan-500/20 bg-cyber-bg-soft/70 transition-transform duration-300 ease-out hover:-translate-y-3"
             >
-              {/* Glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-              {/* Image — CSS-only hover zoom */}
               <div className="relative overflow-hidden">
                 <Image
                   src={project.image}
@@ -137,7 +133,6 @@ const Worktxt = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent" />
               </div>
 
-              {/* Content */}
               <div className="relative p-8">
                 <h3 className="text-3xl font-bold text-white">
                   {project.name}
@@ -147,7 +142,6 @@ const Worktxt = () => {
                   {project.description}
                 </p>
 
-                {/* Buttons */}
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
                     href={project.weblink}
@@ -169,7 +163,6 @@ const Worktxt = () => {
                 </div>
               </div>
 
-              {/* Hover Border Glow — CSS only */}
               <div className="pointer-events-none absolute inset-0 rounded-3xl border border-transparent transition-all duration-300 group-hover:border-cyan-400/60 group-hover:shadow-[0_0_40px_rgba(34,211,238,0.2),inset_0_0_20px_rgba(34,211,238,0.08)]" />
             </motion.div>
           ))}

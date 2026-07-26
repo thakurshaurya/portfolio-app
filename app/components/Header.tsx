@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
-// TODO: swap these for your real routes as you build the site out
 const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "#about" },
@@ -19,7 +18,6 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-cyber-bg/70 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        {/* Brand — TODO: replace with your name / logo */}
         <Link
           href="/"
           className="font-display group flex items-center gap-2 text-lg font-bold tracking-widest"
@@ -32,7 +30,6 @@ const Header = () => {
           </span>
         </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden items-center gap-9 md:flex">
           {NAV_LINKS.map((link) => (
             <Link key={link.label} href={link.href} className="nav-link">
@@ -41,7 +38,6 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Mobile toggle */}
         <button
           type="button"
           aria-label="Toggle menu"

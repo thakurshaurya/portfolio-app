@@ -8,7 +8,6 @@ const Initialtxt = () => {
   return (
     <section className="flex min-h-[90vh] items-center justify-center px-6">
       <div className="mx-auto max-w-5xl text-center">
-        {/* Greeting */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -21,7 +20,6 @@ const Initialtxt = () => {
           </span>
         </motion.div>
 
-        {/* Heading */}
         <motion.h1
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -46,7 +44,6 @@ const Initialtxt = () => {
           </span>
         </motion.h1>
 
-        {/* Description */}
         <motion.p
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -67,7 +64,7 @@ const Initialtxt = () => {
           continuously improving my skills through projects and DSA.
         </motion.p>
 
-        {/* Buttons */}
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -93,7 +90,6 @@ const Initialtxt = () => {
           </Link>
         </motion.div>
 
-        {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

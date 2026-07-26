@@ -22,7 +22,6 @@ const Contacttxt = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // ── Client-side validation ──
     if (!name.trim() || !email.trim() || !message.trim()) {
       setStatus("error");
       setErrorMsg("Please fill in all fields.");
@@ -58,7 +57,6 @@ const Contacttxt = () => {
       setEmail("");
       setMessage("");
 
-      // Reset to idle after 5 seconds
       setTimeout(() => setStatus("idle"), 5000);
     } catch {
       setStatus("error");
@@ -71,8 +69,6 @@ const Contacttxt = () => {
       id="contact"
       className="relative overflow-hidden px-6 py-28"
     >
-      {/* ================= Background ================= */}
-
       <motion.div
         animate={{
           x: [0, 80, 0],
@@ -100,9 +96,6 @@ const Contacttxt = () => {
       />
 
       <div className="relative mx-auto max-w-6xl">
-
-        {/* ================= Heading ================= */}
-
         <motion.div
           initial={{
             opacity: 0,
@@ -139,12 +132,7 @@ const Contacttxt = () => {
             reach out. I'll get back to you as soon as possible.
           </p>
         </motion.div>
-
-        {/* ================= Contact Cards ================= */}
-
         <div className="mt-16 grid gap-8 md:grid-cols-2">
-
-          {/* Email */}
 
           <motion.a
             href="mailto:thakurshaurya2007@gmail.com"
@@ -192,8 +180,6 @@ const Contacttxt = () => {
             </div>
 
           </motion.a>
-
-          {/* Phone */}
 
           <motion.a
             href="tel:+919911755766"
@@ -243,8 +229,6 @@ const Contacttxt = () => {
           </motion.a>
 
         </div>
-
-        {/* ================= Contact Form ================= */}
 
         <motion.form
           onSubmit={handleSubmit}
@@ -342,7 +326,6 @@ const Contacttxt = () => {
             }}
             className="group relative mx-auto flex items-center gap-3 overflow-hidden rounded-2xl bg-cyan-400 px-10 py-5 text-lg font-semibold text-black transition-colors hover:bg-cyan-300 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {/* Hover Glow */}
             <span className="absolute inset-0 bg-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
             <span className="relative">

@@ -54,7 +54,6 @@ const Abouttxt = () => {
     >
 
       <section className="relative overflow-hidden px-6 py-28">
-        {/* Background Glow */}
         <motion.div
           animate={{
             x: [0, 60, 0],
@@ -82,7 +81,6 @@ const Abouttxt = () => {
         />
 
         <div className="relative mx-auto max-w-6xl">
-          {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +103,6 @@ const Abouttxt = () => {
             </p>
           </motion.div>
 
-          {/* Social Cards */}
           <div className="mt-20 flex flex-wrap justify-center gap-6">
             {SOCIALS.map(({ label, href, icon: Icon, color }, index) => (
               <motion.a
@@ -127,7 +124,6 @@ const Abouttxt = () => {
                 whileTap={{ scale: 0.95 }}
                 className="group relative w-40 shrink-0 grow-0 basis-40 overflow-hidden rounded-3xl border border-cyan-500/20 bg-cyber-bg-soft/70 p-8 backdrop-blur-xl sm:w-44 sm:basis-44"
               >
-                {/* Hover Glow */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
@@ -135,7 +131,6 @@ const Abouttxt = () => {
                   className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-cyan-500/5 to-transparent"
                 />
 
-                {/* Animated Border */}
                 <motion.div
                   className="absolute inset-0 rounded-3xl border border-transparent"
                   whileHover={{

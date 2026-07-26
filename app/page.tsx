@@ -9,7 +9,6 @@ import Contacttxt from "./components/PageComponents/Contacttxt";
 const page = () => {
   return (
     <>
-      {/* Cursor-reactive animated background (home page only) */}
       <InteractiveBackground />
 
       <section id="/" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-15 text-center sm:px-8">
@@ -31,8 +30,6 @@ const page = () => {
       <section id="contact" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-15 text-center sm:px-8">
         <Contacttxt />
       </section>
-
-
     </>
   );
 };

@@ -109,12 +109,10 @@ const MarqueeRow = ({
 const Skilltxt = () => {
   return (
     <section id="skills" className="relative overflow-hidden px-6 py-20">
-      {/* Static glow accents — transform-only, cheap to composite */}
       <div className="pointer-events-none absolute left-0 top-10 h-72 w-72 rounded-full bg-cyan-500/10 " />
       <div className="pointer-events-none absolute right-0 bottom-10 h-72 w-72 rounded-full bg-blue-500/10 " />
 
       <div className="relative mx-auto max-w-7xl">
-        {/* Heading — animates in once, never re-triggers on scroll */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +132,6 @@ const Skilltxt = () => {
           </p>
         </motion.div>
 
-        {/* Auto-scrolling skill rows — pure CSS, hover to pause */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

@@ -1,11 +1,5 @@
 @import "tailwindcss";
 
-/* ============================================================
-   THEME TOKENS — Cyberpunk: Edgerunners / David Martinez palette
-   (jacket yellow + orange, neon pink/cyan, deep night bg)
-   Exposed as CSS custom properties + Tailwind utilities
-   e.g. text-cyber-cyan, bg-cyber-yellow, font-display
-   ============================================================ */
 @theme {
   --color-cyber-bg: #07070d;
   --color-cyber-bg-soft: #0d0d18;
@@ -21,7 +15,7 @@
   --font-body: var(--font-rajdhani);
 }
 
-/* ---------- Base ---------- */
+
 html {
   scroll-behavior: smooth;
 }
@@ -41,7 +35,7 @@ body {
   color: #0a0a0a;
 }
 
-/* Neon scrollbar */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -53,14 +47,11 @@ body {
   border-radius: 999px;
 }
 
-/* ============================================================
-   TEXT EFFECTS
-   ============================================================ */
 .font-display {
   font-family: var(--font-display), system-ui, sans-serif;
 }
 
-/* Animated multi-neon gradient text */
+
 .text-gradient-cyber {
   background: linear-gradient(
     90deg,
@@ -88,12 +79,6 @@ body {
     0 0 24px rgba(5, 217, 232, 0.25);
 }
 
-/* ============================================================
-   "JACKET" HOVER — David Martinez inspired.
-   Angular (chamfered) shape, neon outline at rest, on hover a
-   bold yellow→orange gradient sweeps in like the jacket's
-   color-blocking, text flips dark, edges ignite with glow.
-   ============================================================ */
 .cyber-btn {
   --btn-a: var(--color-cyber-yellow);
   --btn-b: var(--color-cyber-orange);
@@ -151,15 +136,11 @@ body {
   transform: translateX(0);
 }
 
-/* Ghost / secondary variant (cyan-pink) */
 .cyber-btn--ghost {
   --btn-a: var(--color-cyber-cyan);
   --btn-b: var(--color-cyber-pink);
 }
 
-/* ============================================================
-   NAV LINKS — glowing underline sweep on hover
-   ============================================================ */
 .nav-link {
   position: relative;
   font-family: var(--font-display), sans-serif;
@@ -197,9 +178,6 @@ body {
   transform: scaleX(1);
 }
 
-/* ============================================================
-   SOCIAL ICON BUTTONS — same "jacket" sweep, icon over text
-   ============================================================ */
 .social-link {
   position: relative;
   z-index: 0;
@@ -251,10 +229,6 @@ body {
   transform: translateY(0);
 }
 
-/* ============================================================
-   INTERACTIVE BACKGROUND (home page) — cursor-reactive
-   Layers: floating neon blobs, parallax grid, cursor spotlight
-   ============================================================ */
 .cyber-bg {
   position: fixed;
   inset: 0;
@@ -267,7 +241,6 @@ body {
   --py: 0;
 }
 
-/* Floating color blobs */
 .cyber-bg::before {
   content: "";
   position: absolute;
@@ -293,7 +266,7 @@ body {
   }
 }
 
-/* Parallax grid that drifts opposite the cursor */
+
 .cyber-bg__grid {
   position: absolute;
   inset: -40px;
@@ -306,7 +279,7 @@ body {
   mask-image: radial-gradient(circle at var(--x) var(--y), #000 0%, transparent 65%);
 }
 
-/* Cursor spotlight (jacket-yellow glow) */
+
 .cyber-bg__glow {
   position: absolute;
   inset: 0;
@@ -317,18 +290,14 @@ body {
   );
 }
 
-/* Vignette + scanline finish */
+
 .cyber-bg__vignette {
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.7) 100%);
 }
 
-/* ============================================================
-   SKILLS MARQUEE — pure CSS scroll loop (no per-frame JS).
-   Two rows drift in opposite directions; hovering a row pauses
-   it, hovering a card lifts + glows it in that skill's color.
-   ============================================================ */
+
 .skill-marquee-wrap {
   position: relative;
   display: flex;
@@ -412,7 +381,7 @@ body {
   color: var(--color-cyber-text);
 }
 
-/* ---------- Reduced motion ---------- */
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

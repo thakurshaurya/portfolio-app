@@ -2,14 +2,6 @@
 
 import { useEffect, useRef } from "react";
 
-/**
- * Full-screen animated background that reacts to the cursor.
- * - Floating neon blobs drift on their own (CSS keyframes).
- * - A grid parallax-shifts opposite the pointer.
- * - A yellow "spotlight" follows the cursor.
- * Pointer position is written to CSS variables via requestAnimationFrame
- * so we never touch React state on move (stays 60fps, no re-renders).
- */
 const InteractiveBackground = () => {
   const ref = useRef<HTMLDivElement>(null);
 
