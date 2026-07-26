@@ -20,7 +20,7 @@ const SOCIALS = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/shaurya-thakur-880912327/",
+    href: "https://www.linkedin.com/in/thakur-shaurya/",
     icon: FaLinkedin,
     color: "#0A66C2",
   },
