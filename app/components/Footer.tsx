@@ -8,7 +8,7 @@ import { MdEmail } from "react-icons/md";
 // TODO: drop in your real profile URLs / email below
 const SOCIALS = [
   { label: "GitHub", href: "https://github.com/thakurshaurya", icon: FaGithub },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/shaurya-thakur-880912327/", icon: FaLinkedinIn },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/thakur-shaurya/", icon: FaLinkedinIn },
   // { label: "X (Twitter)", href: "https://x.com/", icon: FaXTwitter },
   { label: "Instagram", href: "https://instagram.com/_.shaurya7._", icon: FaInstagram },
   // { label: "Discord", href: "https://discord.com/", icon: FaDiscord },
