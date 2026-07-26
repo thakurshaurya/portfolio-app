@@ -12,23 +12,23 @@ const page = () => {
       {/* Cursor-reactive animated background (home page only) */}
       <InteractiveBackground />
 
-      <section id="/" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-24 text-center sm:px-8">
+      <section id="/" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-15 text-center sm:px-8">
         <Initialtxt />
       </section>
 
-      <section id="about" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-24 text-center sm:px-8">
+      <section id="about" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-15 text-center sm:px-8">
         <Abouttxt />
       </section>
 
-      <section id="skill" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-24 text-center sm:px-8">
+      <section id="skill" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-15 text-center sm:px-8">
         <Skilltxt />
       </section>
 
-      <section id="work" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-24 text-center sm:px-8">
+      <section id="work" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-15 text-center sm:px-8">
         <Worktxt />
       </section>
 
-      <section id="contact" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-24 text-center sm:px-8">
+      <section id="contact" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center px-5 py-15 text-center sm:px-8">
         <Contacttxt />
       </section>
 
