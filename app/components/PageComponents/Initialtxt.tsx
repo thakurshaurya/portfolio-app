@@ -98,12 +98,12 @@ const Initialtxt = () => {
           className="mt-20 flex flex-wrap justify-center gap-12"
         >
           <div>
-            <h2 className="text-4xl font-bold text-gradient-cyber">15+</h2>
+            <h2 className="text-4xl font-bold text-gradient-cyber">10+</h2>
             <p className="mt-2 text-gray-400">Projects Built</p>
           </div>
 
           <div>
-            <h2 className="text-4xl font-bold text-gradient-cyber">300+</h2>
+            <h2 className="text-4xl font-bold text-gradient-cyber">150+</h2>
             <p className="mt-2 text-gray-400">DSA Problems</p>
           </div>
 
