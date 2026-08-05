@@ -73,7 +73,7 @@ const Initialtxt = () => {
           className="mt-12 flex flex-wrap items-center justify-center gap-5"
         >
           <a
-            href="/resume.pdf"
+            href="/Shaurya_Thakur_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="cyber-btn flex items-center gap-3 px-8 py-4 text-lg"
