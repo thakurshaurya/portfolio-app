@@ -18,9 +18,13 @@
 
 html {
   scroll-behavior: smooth;
+  /* `clip` (not `hidden`) — hidden would make the root a scroll container,
+     which breaks `position: sticky` on the header and adds a stray scrollbar. */
+  overflow-x: clip;
 }
 
 body {
+  overflow-x: clip;
   background:
     radial-gradient(circle at 15% 15%, rgba(255, 42, 109, 0.08), transparent 40%),
     radial-gradient(circle at 85% 20%, rgba(5, 217, 232, 0.08), transparent 40%),
@@ -382,13 +386,54 @@ body {
 }
 
 
+/* ============================================================
+   AMBIENT DRIFT BLOBS — CSS/compositor driven.
+   Replaces Framer Motion `repeat: Infinity` loops, which kept a
+   main-thread RAF alive permanently and stuttered scrolling.
+   ============================================================ */
+.drift-blob {
+  position: absolute;
+  border-radius: 9999px;
+  transform: translate3d(0, 0, 0);
+  animation: blobDrift var(--drift-duration, 6s) ease-in-out infinite alternate;
+}
+
+.drift-blob--reverse {
+  animation-name: blobDriftReverse;
+}
+
+@keyframes blobDrift {
+  to {
+    transform: translate3d(60px, -40px, 0);
+  }
+}
+
+@keyframes blobDriftReverse {
+  to {
+    transform: translate3d(-50px, 40px, 0);
+  }
+}
+
+/* Idle nudge for the contact send icon (was an always-on JS loop) */
+.plane-nudge {
+  animation: planeNudge 1.6s ease-in-out infinite;
+}
+
+@keyframes planeNudge {
+  50% {
+    transform: translateX(4px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
   .text-gradient-cyber,
   .cyber-bg::before,
-  .skill-marquee-row {
+  .skill-marquee-row,
+  .drift-blob,
+  .plane-nudge {
     animation: none;
   }
 }

@@ -71,9 +71,9 @@ const Worktxt = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{
-            duration: 0.6,
+            duration: 0.2,
             ease: "easeOut",
           }}
           className="mb-20 text-center"
@@ -109,12 +109,12 @@ const Worktxt = () => {
                 y: 0,
               }}
               viewport={{
-                once: false,
+                once: true,
                 amount: 0.2,
               }}
               transition={{
                 delay: index * 0.12,
-                duration: 0.5,
+                duration: 0.3,
                 ease: "easeOut",
               }}
               className="group relative overflow-hidden rounded-3xl border border-cyan-500/20 bg-cyber-bg-soft/70 transition-transform duration-300 ease-out hover:-translate-y-3"

@@ -5,14 +5,16 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "motion/react";
 
 const Initialtxt = () => {
+  // Note: `overflow-x-clip`, not `-hidden`. `overflow-x: hidden` forces the
+  // other axis to `auto`, which gave this section its own stray scrollbar.
   return (
-    <section className="flex min-h-[90vh] items-center justify-center px-6">
+    <section className="flex min-h-[90vh] items-center justify-center overflow-x-clip px-6">
       <div className="mx-auto max-w-5xl text-center">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4 }}
           className="mb-8"
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-500/10 px-6 py-2 text-sm font-semibold tracking-widest text-cyan-300">
@@ -23,8 +25,8 @@ const Initialtxt = () => {
         <motion.h1
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.7, delay: 0.1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.1 }}
           className="font-display text-5xl font-black leading-tight sm:text-6xl lg:text-7xl"
         >
           <span className="text-white">
@@ -47,8 +49,8 @@ const Initialtxt = () => {
         <motion.p
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.7, delay: 0.25 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-300 sm:text-xl"
         >
           I'm a{" "}
@@ -68,8 +70,8 @@ const Initialtxt = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, delay: 0.2 }}
           className="mt-12 flex flex-wrap items-center justify-center gap-5"
         >
           <a
@@ -93,8 +95,8 @@ const Initialtxt = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.6, delay: 0.55 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.2, delay: 0.3 }}
           className="mt-20 flex flex-wrap justify-center gap-12"
         >
           <div>

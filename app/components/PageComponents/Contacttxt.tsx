@@ -69,30 +69,14 @@ const Contacttxt = () => {
       id="contact"
       className="relative overflow-hidden px-6 py-28"
     >
-      <motion.div
-        animate={{
-          x: [0, 80, 0],
-          y: [0, -50, 0],
-        }}
-        transition={{
-          duration: 14,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute left-0 top-10 h-96 w-96 rounded-full bg-cyan-500/10 "
+      <div
+        className="drift-blob left-0 top-10 h-96 w-96 bg-cyan-500/10"
+        style={{ "--drift-duration": "7s" } as React.CSSProperties}
       />
 
-      <motion.div
-        animate={{
-          x: [0, -80, 0],
-          y: [0, 70, 0],
-        }}
-        transition={{
-          duration: 16,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-500/10 "
+      <div
+        className="drift-blob drift-blob--reverse right-0 bottom-0 h-96 w-96 bg-blue-500/10"
+        style={{ "--drift-duration": "8s" } as React.CSSProperties}
       />
 
       <div className="relative mx-auto max-w-6xl">
@@ -106,7 +90,7 @@ const Contacttxt = () => {
             y: 0,
           }}
           viewport={{
-            once: false,
+            once: true,
             amount: 0.4,
           }}
           transition={{
@@ -144,7 +128,7 @@ const Contacttxt = () => {
               opacity: 1,
               x: 0,
             }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{
               duration: .6,
               type: "spring",
@@ -191,7 +175,7 @@ const Contacttxt = () => {
               opacity: 1,
               x: 0,
             }}
-            viewport={{ once: false }}
+            viewport={{ once: true }}
             transition={{
               duration: .6,
               type: "spring",
@@ -241,7 +225,7 @@ const Contacttxt = () => {
             y: 0,
           }}
           viewport={{
-            once: false,
+            once: true,
           }}
           transition={{
             duration: .7,
@@ -336,21 +320,13 @@ const Contacttxt = () => {
                   : "Send Message"}
             </span>
 
-            <motion.span
-              className="relative"
-              animate={
-                status === "sending"
-                  ? { rotate: [0, 360] }
-                  : { x: [0, 4, 0] }
-              }
-              transition={
-                status === "sending"
-                  ? { repeat: Infinity, duration: 0.8, ease: "linear" }
-                  : { repeat: Infinity, duration: 1.6, ease: "easeInOut" }
-              }
+            {/* Idle nudge is CSS-driven so no RAF loop runs while the page sits
+                idle; the spin only exists while a send is actually in flight. */}
+            <span
+              className={`relative ${status === "sending" ? "animate-spin" : "plane-nudge"}`}
             >
               {status === "sent" ? <FaCheck /> : <FaPaperPlane />}
-            </motion.span>
+            </span>
           </motion.button>
         </motion.form>
       </div>
