@@ -6,6 +6,14 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    name: "JobHunt",
+    description:
+      "A realtime job listing and management platform built with Next.js, TypeScript, and MongoDB featuring an elegant and responsive interface.",
+    weblink: "https://jobsearch-app-nine.vercel.app/",
+    gitlink: "https://github.com/thakurshaurya/jobsearch-app",
+    image: "/images/jobhuntapp.png",
+  },
+  {
     name: "README File Generator",
     description:
       "Generate beautiful GitHub README files effortlessly with customizable templates and live preview.",
@@ -96,7 +104,7 @@ const Worktxt = () => {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid gap-10 md:grid-cols-2">
+        <div className="flex flex-wrap gap-5 justify-center">
           {projects.map((project, index) => (
             <motion.div
               key={project.name}
@@ -117,10 +125,12 @@ const Worktxt = () => {
                 duration: 0.3,
                 ease: "easeOut",
               }}
-              className="group relative overflow-hidden rounded-3xl border border-cyan-500/20 bg-cyber-bg-soft/70 transition-transform duration-300 ease-out hover:-translate-y-3"
+              className="group relative w-full overflow-hidden rounded-3xl border border-cyan-500/20 bg-cyber-bg-soft/70 transition-transform duration-300 ease-out hover:-translate-y-3 md:w-[calc(50%-20px)]"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              {/* Hover glow */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
+              {/* Image */}
               <div className="relative overflow-hidden">
                 <Image
                   src={project.image}
@@ -133,7 +143,8 @@ const Worktxt = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050816] via-transparent to-transparent" />
               </div>
 
-              <div className="relative p-8">
+              {/* Content */}
+              <div className="relative flex flex-col p-8">
                 <h3 className="text-3xl font-bold text-white">
                   {project.name}
                 </h3>
@@ -142,11 +153,13 @@ const Worktxt = () => {
                   {project.description}
                 </p>
 
+                {/* Buttons */}
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
                     href={project.weblink}
                     target="_blank"
-                    className="flex items-center gap-3 rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-black transition-all duration-200 hover:scale-105 hover:bg-cyan-400 active:scale-95"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 rounded-xl bg-cyan-500 px-6 py-3 font-semibold text-black transition-transform duration-200 hover:scale-105 hover:bg-cyan-400 active:scale-95"
                   >
                     <FaExternalLinkAlt />
                     Live Demo
@@ -155,6 +168,7 @@ const Worktxt = () => {
                   <a
                     href={project.gitlink}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-3 rounded-xl border border-cyan-500/30 px-6 py-3 font-semibold text-white transition-all duration-200 hover:scale-105 hover:border-cyan-400 hover:bg-cyan-500/10 active:scale-95"
                   >
                     <FaGithub />
@@ -163,6 +177,7 @@ const Worktxt = () => {
                 </div>
               </div>
 
+              {/* Border glow */}
               <div className="pointer-events-none absolute inset-0 rounded-3xl border border-transparent transition-all duration-300 group-hover:border-cyan-400/60 group-hover:shadow-[0_0_40px_rgba(34,211,238,0.2),inset_0_0_20px_rgba(34,211,238,0.08)]" />
             </motion.div>
           ))}
