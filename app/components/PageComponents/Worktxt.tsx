@@ -11,7 +11,7 @@ const projects = [
       "A modern movie and TV series discovery and streaming platform powered by TMDB metadata with a sleek dark interface.",
     weblink: "https://movieapp-iota-flame.vercel.app/",
     gitlink: "https://github.com/thakurshaurya/MovieApp",
-    image: "/images/Movieapp.jpg",
+    image: "/images/Movieapp.png",
   },
   {
     name: "JobHunt",
