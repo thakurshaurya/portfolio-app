@@ -6,6 +6,14 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    name: "Antarctic",
+    description:
+      "A modern movie and TV series discovery and streaming platform powered by TMDB metadata with a sleek dark interface.",
+    weblink: "https://movieapp-iota-flame.vercel.app/",
+    gitlink: "https://github.com/thakurshaurya/MovieApp",
+    image: "/images/Movieapp.jpg",
+  },
+  {
     name: "JobHunt",
     description:
       "A realtime job listing and management platform built with Next.js, TypeScript, and MongoDB featuring an elegant and responsive interface.",
